@@ -296,6 +296,149 @@
         flex: 1 1 60%;
         padding: 100px 69px 90px 58px;
     }
+
+    .moreticket__message{
+        flex-direction: column;
+        margin-bottom: 42px;
+    }
+    .moreticket__message-left{
+        padding: 10px 36px;
+        p{
+            max-width: unset;
+        }
+    }
+    .moreticket__message-right{
+        padding: 26px 20px 32px 29px;
+        p{
+            max-width: unset;
+        }
+    }
+    .answer-ticket__header{
+        margin-left: 15px;
+
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    .answer-ticket__message-user{
+        flex-direction: column;
+        margin-top: 23px;
+    }
+    .answer-ticket__user{
+        padding: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 11px;
+    }
+    .answer-ticket__user-timedata{
+        flex-direction: row;
+        margin-top: unset;
+
+        span + span{
+            margin-left: 10px;
+        }
+    }
+    .answer-ticket__user-question{
+        width: 100%;
+        padding: 24px 60px 24px 38px;
+        p{
+            max-width: unset;
+        }
+        &:before{
+            display: none;
+        }
+    }
+    .answer-ticket__message-support{
+        flex-direction: column;    
+        &:last-child{
+            margin-bottom: unset;
+        }
+
+        margin-top: 16px;
+    }
+    .answer-ticket__support-add{
+        flex: unset;
+    
+        padding: unset;
+
+        display: flex;
+        flex-direction: row-reverse;
+
+        margin-bottom: 3px;
+    }
+    .answer-ticket__support-answer-add{
+        flex: unset;
+    
+        padding: 12px 39px;
+    }
+    .answer-ticket__support{
+        flex:unset;
+        padding: 0;
+        position: relative;
+        margin-bottom: 0;
+
+        display: flex;
+        justify-content: space-between;
+    }
+    .answer-ticket__support-answer{
+        width: 100%;
+        flex: unset;
+        padding:24px 60px 24px 38px;
+
+        &:after{
+            display: none;
+        }
+        p{
+            max-width: unset;
+        }
+
+        margin-top: 11px;
+    }
+    .answer-ticket__support-name{
+        margin-bottom: unset;
+        padding-left: 54px;
+    }
+    .answer-ticket__support-timedata{
+        flex-direction: row;
+        align-items: flex-end;
+
+        span + span{
+            margin-left: 10px;
+        }
+    }
+    .answer-ticket__support-picture{
+        width: 38px;
+        height: 38px;
+        top: -4px;
+        left: 0;
+    }
+    .addmessage{
+        margin-left: unset;
+        margin-top: 56px;
+    }
+    .addmessage__input{
+        max-width: 100%;
+    }
+
+    .addmessage__buttons{
+        margin-top: 15px;
+        flex-direction: column;
+        max-width: 100%;
+        & > *:not(:last-child){
+            margin-right: 0px;
+            margin-bottom: 12px;
+        }
+    }
+    .addmessage__add{
+        flex: unset;
+        align-items: center;
+        justify-content: unset;
+    }
+    .addmessage__close{
+        flex: unset;
+    }
 }
 
 
@@ -795,148 +938,7 @@
         display: none;
     }
 
-    .moreticket__message{
-        flex-direction: column;
-        margin-bottom: 42px;
-    }
-    .moreticket__message-left{
-        padding: 10px 36px;
-        p{
-            max-width: unset;
-        }
-    }
-    .moreticket__message-right{
-        padding: 26px 20px 32px 29px;
-        p{
-            max-width: unset;
-        }
-    }
-    .answer-ticket__header{
-        margin-left: 15px;
-
-        font-size: 22px;
-        line-height: 27px;
-    }
-
-    .answer-ticket__message-user{
-        flex-direction: column;
-        margin-top: 23px;
-    }
-    .answer-ticket__user{
-        padding: 0;
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 11px;
-    }
-    .answer-ticket__user-timedata{
-        flex-direction: row;
-        margin-top: unset;
-
-        span + span{
-            margin-left: 10px;
-        }
-    }
-    .answer-ticket__user-question{
-        width: 100%;
-        padding: 24px 60px 24px 38px;
-        p{
-            max-width: unset;
-        }
-        &:before{
-            display: none;
-        }
-    }
-    .answer-ticket__message-support{
-        flex-direction: column;    
-        &:last-child{
-            margin-bottom: unset;
-        }
-
-        margin-top: 16px;
-    }
-    .answer-ticket__support-add{
-        flex: unset;
     
-        padding: unset;
-
-        display: flex;
-        flex-direction: row-reverse;
-
-        margin-bottom: 3px;
-    }
-    .answer-ticket__support-answer-add{
-        flex: unset;
-    
-        padding: 12px 39px;
-    }
-    .answer-ticket__support{
-        flex:unset;
-        padding: 0;
-        position: relative;
-        margin-bottom: 0;
-
-        display: flex;
-        justify-content: space-between;
-    }
-    .answer-ticket__support-answer{
-        width: 100%;
-        flex: unset;
-        padding:24px 60px 24px 38px;
-
-        &:after{
-            display: none;
-        }
-        p{
-            max-width: unset;
-        }
-
-        margin-top: 11px;
-    }
-    .answer-ticket__support-name{
-        margin-bottom: unset;
-        padding-left: 54px;
-    }
-    .answer-ticket__support-timedata{
-        flex-direction: row;
-        align-items: flex-end;
-
-        span + span{
-            margin-left: 10px;
-        }
-    }
-    .answer-ticket__support-picture{
-        width: 38px;
-        height: 38px;
-        top: -4px;
-        left: 0;
-    }
-    .addmessage{
-        margin-left: unset;
-        margin-top: 56px;
-    }
-    .addmessage__input{
-        max-width: 100%;
-    }
-
-    .addmessage__buttons{
-        margin-top: 15px;
-        flex-direction: column;
-        max-width: 100%;
-        & > *:not(:last-child){
-            margin-right: 0px;
-            margin-bottom: 12px;
-        }
-    }
-    .addmessage__add{
-        flex: unset;
-        align-items: center;
-        justify-content: unset;
-    }
-    .addmessage__close{
-        flex: unset;
-    }
     .tickettable{
         padding-bottom: 53px;
     }

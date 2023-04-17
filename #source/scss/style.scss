@@ -3627,6 +3627,11 @@ html, body{
 }
 
 .cabinet__exit{
+	margin-top: -15px !important;
+	padding-top: 15px !important;
+	margin-bottom: -15px !important;
+	padding-bottom: 15px !important;
+
 	width: 100px;
 	flex-shrink: 0;
 	cursor: pointer;
