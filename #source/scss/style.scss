@@ -462,10 +462,13 @@ html, body{
 	& > *:last-child{
 		color: #6C6C6C;
 	}
+
+	transition: all 0.3s ease;
 }
 .header__selectbtn-mb{
 	width: 38px;
-	height: 20px;
+	height: 38px;
+	padding-left: 5px;
 
 
 	border-radius: 6px;
@@ -500,7 +503,7 @@ html, body{
 	background-image: url('../img/header/rus.svg');
 }
 .header__selectoption-mb{
-	height: 20px;
+	height: 38px;
 	width: 38px;
 	align-items: center;
 	justify-content: center;
@@ -526,9 +529,10 @@ html, body{
 	display: flex;
 }
 .header__langwrap-mb.active{
-	margin-bottom: -20px;
-	padding-bottom: 20px;
-	box-shadow: 0px 6px 74px rgba(0, 0, 0, 0.3);
+	margin-bottom: -38px;
+	padding-bottom: 38px;
+	box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.4);
+	background-color: #ece2e260;
 }
 .header__langsecond-mb{
 	width: 16px;
@@ -560,6 +564,8 @@ html, body{
 	img{
 		width: 100%;
 	}
+
+	cursor: pointer;
 }
 .header__burger-btn-close{
 	width: 16px;
@@ -567,6 +573,8 @@ html, body{
 	img{
 		width: 100%;
 	}
+
+	cursor: pointer;
 }
 .header__burger{
 	position: fixed;
@@ -964,6 +972,7 @@ html, body{
 }
 .dignity__card{ //ВРАПЕР КАРТОЧКИ
 	min-width: 260px;
+	width: 270px !important;
 }
 .dignity__card-wrapper{ //ОФОРМЛЕНИЕ КАРТОЧКИ ДАЛЬШЕ САМОЙ
 	width: 270px;
@@ -1130,6 +1139,7 @@ html, body{
 }
 .tariff__card{
 	min-width: 270px;
+	max-width: 270px !important;
 }
 .tariff__card-top{
 	position: relative;
@@ -1622,6 +1632,7 @@ html, body{
 .comments__review{
 	min-width: 371px;
 	max-height: 309px;
+	max-width: 372px !important;
 }
 .review{
 	box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.09);
@@ -1836,6 +1847,7 @@ html, body{
 }
 .news__card{
 	min-width: 567px;
+	max-width: 568px !important;
 
 
 	margin-top: -50px;
@@ -2342,9 +2354,14 @@ html, body{
 
 }
 .footer__bottom-item{
-	min-width: 113px;
-
+	min-width: auto !important;
+	max-width: 114px !important;
 	text-align: center;
+
+	height: 34px !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .footer__bottom-img{
 	max-width: 100%;
@@ -2589,6 +2606,7 @@ html, body{
 }
 .team__card{
 	min-width: 260px;
+	max-width: 260px !important;
 }
 .team__card-wrap{
 	max-width: 260px;
@@ -3230,6 +3248,8 @@ html, body{
 	margin-bottom: 3px;
 
 	.header__langwrap{
+		margin-left: unset;
+
 		border-radius: none;
 		background: #F5F5F5;
 
@@ -3237,17 +3257,18 @@ html, body{
 			border: none;
 
 			width: 90px;
-			height: 20px;
+			height: 40px;
 		}
 		.header__selectoption{
-			height: 30px;
+			height: 40px;
 			width: 90px;
 		}
 	}
 	.header__langwrap.active{
-		margin-bottom: -32px;
-		padding-bottom: 32px;
+		margin-bottom: -40px;
+		padding-bottom: 40px;
 		box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.1);
+		background-color: #fff;
 	}
 }
 .answers__language-p{
@@ -3417,6 +3438,8 @@ html, body{
 .typicalpage__balance{
 	display: flex;
 	align-items: center;
+
+	cursor: pointer;
 }
 .typicalpage__yourbalance{
 	font-weight: 600;
@@ -3498,8 +3521,14 @@ html, body{
 
 	.swiper-slide{
 		width:auto!important; 
-	}
 
+		margin-top: -44px;
+		padding-top: 44px;
+		margin-bottom: -60px;
+		padding-bottom: 60px;
+	}
+	margin-top: -44px !important;
+	padding-top: 44px !important;
 	margin-bottom: -44px !important;
 	padding-bottom: 44px !important;
 }
@@ -3507,6 +3536,11 @@ html, body{
 .cabinet__item{
 	padding-left: 59px;
 	padding-right: 33px;
+
+	margin-top: -44px !important;
+	padding-top: 44px !important;
+	margin-bottom: -44px !important;
+	padding-bottom: 44px !important;
 
 	position: relative;
 	&:after{
@@ -3520,7 +3554,7 @@ html, body{
 
 		position: absolute;
 		left: 26px;
-		top: 2px;
+		top: 46px;
 	}
 
 	cursor: pointer;

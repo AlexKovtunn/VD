@@ -565,6 +565,8 @@ html, body {
 .header__langwrap-mb {
   position: relative;
   border-radius: 6px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .header__langwrap-mb > *:first-child {
   color: #232323;
@@ -575,7 +577,8 @@ html, body {
 
 .header__selectbtn-mb {
   width: 38px;
-  height: 20px;
+  height: 38px;
+  padding-left: 5px;
   border-radius: 6px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -609,7 +612,7 @@ html, body {
 }
 
 .header__selectoption-mb {
-  height: 20px;
+  height: 38px;
   width: 38px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -642,10 +645,11 @@ html, body {
 }
 
 .header__langwrap-mb.active {
-  margin-bottom: -20px;
-  padding-bottom: 20px;
-  -webkit-box-shadow: 0px 6px 74px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 6px 74px rgba(0, 0, 0, 0.3);
+  margin-bottom: -38px;
+  padding-bottom: 38px;
+  -webkit-box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.4);
+  background-color: rgba(236, 226, 226, 0.3764705882);
 }
 
 .header__langsecond-mb {
@@ -683,6 +687,7 @@ html, body {
 .header__burger-btn {
   width: 16px;
   height: 18px;
+  cursor: pointer;
 }
 .header__burger-btn img {
   width: 100%;
@@ -691,6 +696,7 @@ html, body {
 .header__burger-btn-close {
   width: 16px;
   height: 18px;
+  cursor: pointer;
 }
 .header__burger-btn-close img {
   width: 100%;
@@ -1113,6 +1119,7 @@ html, body {
 
 .dignity__card {
   min-width: 260px;
+  width: 270px !important;
 }
 
 .dignity__card-wrapper {
@@ -1306,6 +1313,7 @@ html, body {
 
 .tariff__card {
   min-width: 270px;
+  max-width: 270px !important;
 }
 
 .tariff__card-top {
@@ -1813,6 +1821,7 @@ html, body {
 .comments__review {
   min-width: 371px;
   max-height: 309px;
+  max-width: 372px !important;
 }
 
 .review {
@@ -2054,6 +2063,7 @@ html, body {
 
 .news__card {
   min-width: 567px;
+  max-width: 568px !important;
   margin-top: -50px;
   padding-top: 82px;
   height: auto;
@@ -2547,8 +2557,19 @@ html, body {
 }
 
 .footer__bottom-item {
-  min-width: 113px;
+  min-width: auto !important;
+  max-width: 114px !important;
   text-align: center;
+  height: 34px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer__bottom-img {
@@ -2799,6 +2820,7 @@ html, body {
 
 .team__card {
   min-width: 260px;
+  max-width: 260px !important;
 }
 
 .team__card-wrap {
@@ -3455,23 +3477,25 @@ html, body {
   margin-bottom: 3px;
 }
 .answers__language .header__langwrap {
+  margin-left: unset;
   border-radius: none;
   background: #F5F5F5;
 }
 .answers__language .header__langwrap .header__selectbtn {
   border: none;
   width: 90px;
-  height: 20px;
+  height: 40px;
 }
 .answers__language .header__langwrap .header__selectoption {
-  height: 30px;
+  height: 40px;
   width: 90px;
 }
 .answers__language .header__langwrap.active {
-  margin-bottom: -32px;
-  padding-bottom: 32px;
+  margin-bottom: -40px;
+  padding-bottom: 40px;
   -webkit-box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .answers__language-p {
@@ -3623,6 +3647,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .typicalpage__yourbalance {
@@ -3705,16 +3730,26 @@ html, body {
 .cabinet__swiper {
   max-width: 815px !important;
   margin-left: unset !important;
+  margin-top: -44px !important;
+  padding-top: 44px !important;
   margin-bottom: -44px !important;
   padding-bottom: 44px !important;
 }
 .cabinet__swiper .swiper-slide {
   width: auto !important;
+  margin-top: -44px;
+  padding-top: 44px;
+  margin-bottom: -60px;
+  padding-bottom: 60px;
 }
 
 .cabinet__item {
   padding-left: 59px;
   padding-right: 33px;
+  margin-top: -44px !important;
+  padding-top: 44px !important;
+  margin-bottom: -44px !important;
+  padding-bottom: 44px !important;
   position: relative;
   cursor: pointer;
 }
@@ -3728,7 +3763,7 @@ html, body {
   background-repeat: no-repeat;
   position: absolute;
   left: 26px;
-  top: 2px;
+  top: 46px;
 }
 
 .cabinet__item-active {
@@ -7171,12 +7206,13 @@ html, body {
             transform: translateX(50%);
   }
   .news__card {
-    min-width: 390px;
+    min-width: 350px;
+    max-width: 391px !important;
     margin-top: -50px;
     padding-top: 82px;
   }
   .news__card-wrapper {
-    min-width: 390px;
+    min-width: 350px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -7765,6 +7801,12 @@ html, body {
   }
   .modal-reboot__button {
     max-width: 100%;
+  }
+  .dignity__wrapper {
+    margin-left: -80px !important;
+  }
+  .tariff__swiper .swiper-wrapper {
+    margin-left: -80px !important;
   }
 }
 @media (max-width: 420px) {

@@ -67,25 +67,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   const swiper2 = new Swiper('.dignity__swiper', {
-    spaceBetween: 30,
-    loop: true,
     centerSlide: 'true',
     grabCursor: 'true',
-    breakpoints: {
-      300: {
-        slidesPerView: 1.5,
-      },
-      600: {
-        slidesPerView: 3,
-      },
-      1024: {
-        slidesPerView: 4,
-      }
-    },
+    slidesPerView: 'auto',
+    spaceBetween: 30,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
       dynamicBullets: true,
+      preventInteractionOnTransition: true
     },
     navigation: {
       nextEl: '.dignity__swiper-button-next',
@@ -93,26 +83,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
     },
   });
 
+  swiper2.on('slideChangeTransitionEnd', function() {
+    var pagination = swiper2.pagination.el;
+    var bullets = pagination.querySelectorAll('.swiper-pagination-bullet');
+    for (var i = 0; i < bullets.length; i++) {
+      if (i >= swiper2.slides.length) {
+        bullets[i].remove();
+      }
+    }
+  });
+  
   const swiper3 = new Swiper('.tariff__swiper', {
-    loop: true,
     spaceBetween: 30,
     centerSlide: 'true',
     grabCursor: 'true',
-    breakpoints: {
-      300: {
-        slidesPerView: 1.5,
-      },
-      600: {
-        slidesPerView: 3,
-      },
-      1024: {
-        slidesPerView: 4,
-      }
-    },
+    slidesPerView: 'auto',
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
       dynamicBullets: true,
+      preventInteractionOnTransition: true
     },
     navigation: {
       nextEl: '.tariff__swiper-button-next',
@@ -120,27 +110,27 @@ document.addEventListener("DOMContentLoaded", function(event) {
     },
   });
 
-  
+  swiper3.on('slideChangeTransitionEnd', function() {
+    var pagination = swiper3.pagination.el;
+    var bullets = pagination.querySelectorAll('.swiper-pagination-bullet');
+    for (var i = 0; i < bullets.length; i++) {
+      if (i >= swiper3.slides.length) {
+        bullets[i].remove();
+      }
+    }
+  });
+
+
   const swiper4 = new Swiper('.comments__swiper', {
-    loop: true,
     spaceBetween: 28,
     centerSlide: 'true',
     grabCursor: 'true',
-    breakpoints: {
-      300: {
-        slidesPerView: 1.1,
-      },
-      600: {
-        slidesPerView: 3,
-      },
-      1024: {
-        slidesPerView: 3,
-      }
-    },
+    slidesPerView: 'auto',
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
       dynamicBullets: true,
+      preventInteractionOnTransition: true,
     },
     navigation: {
       nextEl: '.review__swiper-button-next',
@@ -148,62 +138,57 @@ document.addEventListener("DOMContentLoaded", function(event) {
     },
   });
 
+  swiper4.on('slideChangeTransitionEnd', function() {
+    var pagination = swiper4.pagination.el;
+    var bullets = pagination.querySelectorAll('.swiper-pagination-bullet');
+    for (var i = 0; i < bullets.length; i++) {
+      if (i >= swiper4.slides.length) {
+        bullets[i].remove();
+      }
+    }
+  });
   
   const swiper5 = new Swiper('.news__swiper', {
-    loop: true,
     spaceBetween: 34.5,
     centerSlide: 'true',
     grabCursor: 'true',
-    breakpoints: {
-      300: {
-        slidesPerView: 1.1,
-      },
-      600: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 2,
-      }
-    },
+    slidesPerView: 'auto',
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
       dynamicBullets: true,
+      preventInteractionOnTransition: true,
     },
-    navigation: {
-      nextEl: '.review__swiper-button-next',
-      prevEl: '.review__swiper-button-prev',
-    },
+
+  });
+
+  swiper5.on('slideChangeTransitionEnd', function() {
+    var pagination = swiper5.pagination.el;
+    var bullets = pagination.querySelectorAll('.swiper-pagination-bullet');
+    for (var i = 0; i < bullets.length; i++) {
+      if (i >= swiper5.slides.length) {
+        bullets[i].remove();
+      }
+    }
   });
 
   const swiper6 = new Swiper('.footer__bottom-list', {
-    loop: true,
     spaceBetween: 20,
     centerSlide: 'true',
     grabCursor: 'true',
-    breakpoints: {
-      300: {
-        slidesPerView: 4,
-      },
-      600: {
-        slidesPerView: 6,
-      },
-      1024: {
-        slidesPerView: 8,
-      }
-    },
+    slidesPerView: 'auto',
   });
 
   const swiper7 = new Swiper('.team__swiper', {
-    loop: true,
     spaceBetween: 40,
     centerSlide: 'true',
     grabCursor: 'true',
-    slidesPerView: 4,
+    slidesPerView: 'auto',
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
       dynamicBullets: true,
+      preventInteractionOnTransition: true,
     },
     navigation: {
       nextEl: '.team__swiper-button-next',
@@ -280,7 +265,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       })
 
       const targetCabinetContentSection = document.querySelector(`#${targetIdOfNav}`);
-      targetCabinetContentSection.style.display = 'block';
+      if (targetCabinetContentSection !== null){
+        targetCabinetContentSection.style.display = 'block';
+      }
 
     })
   }

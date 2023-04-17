@@ -534,14 +534,15 @@
         transform: translateX(50%);
     }
     .news__card{
-        min-width: 390px;
+        min-width: 350px;
+        max-width: 391px !important;
     
     
         margin-top: -50px;
         padding-top: 82px;
     }
     .news__card-wrapper{
-        min-width: 390px;
+        min-width: 350px;
         flex-direction: column;
         padding-top: 48px;
         padding-left: 57px;
@@ -1061,6 +1062,16 @@
     }
     .modal-reboot__button{
         max-width: 100%;
+    }
+
+    .dignity__wrapper {
+        margin-left: -80px !important;
+    }
+
+    .tariff__swiper{
+        .swiper-wrapper{
+            margin-left: -80px !important;
+        }
     }
 }
 
